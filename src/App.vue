@@ -12,13 +12,16 @@ export default {
     },
     data(){
         return{
-            leftWindow:'ChatArea'
+            leftWindow:'ChatArea',
+            chatIndex:-1
         }
     },
     methods:{
-        intoFriend(window)
+        switchWindows(window)
         {
-            this.leftWindow=window
+            this.leftWindow=window.windowName
+            this.chatIndex=window.index
+            console.log("run switchWindows"+window.windowName+" "+window.index)
         }
     }
 }
@@ -31,10 +34,10 @@ export default {
         <div class="row" style="height: 100vh">
 
             <div class="col-3 border border-primary">
-                <DirectMessage @intoFriend="intoFriend"></DirectMessage>
+                <DirectMessage @switchWindow="switchWindows"></DirectMessage>
             </div>
             <div class="col-9">
-                <component :is="leftWindow"></component>
+                <component :is="leftWindow" :messageChatIndex="chatIndex"></component>
             </div>
 
         </div>
