@@ -11,6 +11,15 @@
             <small>{{ bot.samll2 }}</small>
         </a>
 
+        <a href="#" class="list-group-item list-group-item-action" aria-current="true" @click="$emit('switchWindow',{windowName:'ChatRoom',index:-1})">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">聊天室</h5>
+                <small>3 days ago</small>
+            </div>
+            <p class="mb-1"></p>
+            <small>And some small print.</small>
+        </a>
+
     </div>
 
 
@@ -37,7 +46,7 @@ export default {
                 {
                     name: "女朋友",
                     small: "3 days ago",
-                    lastMessage: "你说的对，但是原神是一款......",
+                    lastMessage: "你在干嘛",
                     samll2: "And some small print."
                 }],
             selectedIndex: -1

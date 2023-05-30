@@ -1,7 +1,7 @@
 <template>
 
     <div class="d-grid gap-2">
-        <button class="btn btn-primary" type="button" @click="$emit('switchWindow',{windowName:'FriendList',index:-1})">Friend</button>
+        <button class="btn btn-primary" type="button" @click="$emit('switchWindow',{windowName:'FriendList',index:-1})">Bot</button>
     </div>
 
     <div class="list-group">
@@ -25,7 +25,7 @@ export default {
         return{
             roleList:[{name:"蔡徐坤",small:"3 days ago",lastMessage:"历史消息：鸡你太美 鸡你太美......",samll2:"And some small print."},
                 {name:"chat-gpt",small:"3 days ago",lastMessage:"是的，关于福岛核废水排放的问题存在争议和不同意见，包括有......",samll2:"And some small print."},
-                {name:"女朋友",small:"3 days ago",lastMessage:"你说的对，但是原神是一款......",samll2:"And some small print."}],
+                {name:"女朋友",small:"3 days ago",lastMessage:"你在干嘛",samll2:"And some small print."}],
             selectedIndex:-1
         }
     },

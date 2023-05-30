@@ -4,16 +4,17 @@ import DirectMessage from './components/DirectMessage.vue';
 import ChatArea from './components/ChatArea.vue';
 import FriendList from './components/FriendList.vue';
 import BotSetup from './components/BotSetup.vue';
+import ChatRoom from './components/ChatRoom.vue';
 
 
 export default {
     name: "App",
     components:{
-        DirectMessage,ChatArea,FriendList,BotSetup
+        DirectMessage,ChatArea,FriendList,BotSetup,ChatRoom
     },
     data(){
         return{
-            leftWindow:'ChatArea',
+            leftWindow:'ChatRoom',
             chatIndex:-1
         }
     },
