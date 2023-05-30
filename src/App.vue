@@ -3,12 +3,13 @@
 import DirectMessage from './components/DirectMessage.vue';
 import ChatArea from './components/ChatArea.vue';
 import FriendList from './components/FriendList.vue';
+import BotSetup from './components/BotSetup.vue';
 
 
 export default {
     name: "App",
     components:{
-        DirectMessage,ChatArea,FriendList
+        DirectMessage,ChatArea,FriendList,BotSetup
     },
     data(){
         return{
@@ -37,7 +38,7 @@ export default {
                 <DirectMessage @switchWindow="switchWindows"></DirectMessage>
             </div>
             <div class="col-9">
-                <component :is="leftWindow" :messageChatIndex="chatIndex"></component>
+                <component :is="leftWindow" :messageChatIndex="chatIndex" @switchWindow="switchWindows"></component>
             </div>
 
         </div>
