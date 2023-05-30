@@ -1,8 +1,9 @@
 <template>
+
     <!-- 不加一个div就会因为flex布局铺满整个row  -->
     <div class="bd-example">
 
-        <div v-for="sentence in chatContent">
+        <div v-for="sentence in getChatContent">
             <div class="alert alert-primary"  style="display: inline-block">
                 <p>{{ sentence }}</p>
             </div>
@@ -26,11 +27,14 @@ export default {
     props:["messageChatIndex"],
     data(){
         return{
-            chatContent:[]
+
         }
     },
-    mounted() {
-        this.chatContent=chatList[this.messageChatIndex]
+    computed:{
+        getChatContent()
+        {
+            return chatList[this.messageChatIndex]
+        }
     }
 }
 </script>
